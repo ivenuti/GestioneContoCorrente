@@ -1,4 +1,4 @@
-package it.davincifascetti.quintainf;
+package it.davincifascetti.quinta;
 
 public class ContoCorrente {
 	private float saldo;
@@ -24,7 +24,7 @@ public class ContoCorrente {
 	
 	public synchronized void preleva(float quanto) throws InterruptedException {
 		while(saldo-quanto<0) {
-			System.out.println("Non c'è disponibilità di "+quanto);
+			System.out.println("Non c'Ã¨ disponibilitÃ  di "+quanto);
 			wait();
 		}
 			//saldo = saldo - quanto;
