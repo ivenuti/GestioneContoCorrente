@@ -1,5 +1,8 @@
 package it.davincifascetti.quinta;
 
+/**
+ Questa classe serve a gestire un oggetto di tipo ContoCorrente attraverso più thread
+*/
 public class GestoreContoCorrente extends Thread{
 	
 	private ContoCorrente cc;
