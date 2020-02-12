@@ -1,4 +1,4 @@
-package it.davincifascetti.quintainf;
+package it.davincifascetti.quinta;
 
 public class GestoreContoCorrente extends Thread{
 	
@@ -12,16 +12,16 @@ public class GestoreContoCorrente extends Thread{
 	
 	public void run(){
 		System.out.println(descrizione + " in esecuzione");
-		float quantit‡ = (int)(Math.random()*90+10);
+		float quantit√† = (int)(Math.random()*90+10);
 		if(Math.random()<0.5) {
 			//versamento
-			System.out.println(descrizione + " Verso "+ quantit‡);
-			cc.versa(quantit‡);
+			System.out.println(descrizione + " Verso "+ quantit√†);
+			cc.versa(quantit√†);
 		}else {
 			//prelievo
-			System.out.println(descrizione + " Prelevo "+ quantit‡);
+			System.out.println(descrizione + " Prelevo "+ quantit√†);
 			try {
-				cc.preleva(quantit‡);
+				cc.preleva(quantit√†);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -42,7 +42,7 @@ public class GestoreContoCorrente extends Thread{
 		bancomat.join();
 		sportello.join();
 		online.join();
-		System.out.println("Alla fine il saldo Ë "+c.getSaldo());
+		System.out.println("Alla fine il saldo √® "+c.getSaldo());
 
 	}
 
